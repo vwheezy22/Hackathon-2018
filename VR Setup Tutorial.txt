@@ -1,0 +1,37 @@
+This tutorial will help you to create a VR Unity project for an Android device.
+
+What you'll need:
+     -Unity 5.6 (or higher) with Android SDK installed
+     -Java Development Kit installed (www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+     -Android Studio installer downloaded (developer.android.com/studio/index.html#downloads)
+     -Google VR unity package downloaded (developers.google.com/vr/unity/download)
+     -Android phone with a reasonably sized screen and gyroscope sensor (most high-end smartphones have that)
+
+1) Android Studio Setup:
+     -Go through the installer with all default settings (install will take about 10 min)
+     -Choose to launch Studio after this is finished
+     -Start a new project (It doesn't matter, just click through so you can get to the Studio home screen)
+     -Go to Tools>Android>SDK Manager
+     -Make sure that the SDK Platform installed corresponds to your phone's version of Android
+     -Copy "Android SDK Location" address to clipboard (this will be useful later)
+
+2) Project Setup:
+     -Create a New Project in Unity
+     -Go to File>Build Settings and click Android, then hit the "Switch Platform" button
+     -Hit "Player Settings" next to that, scroll down, and click on "Other Settings"
+     -In Other Settings, enable the "Virtual Reality Supported" checkbox and add the Cardboard SDK by hitting the plus sign, 
+         scroll down and change "Package Name" to the format of com.yourname.projectname, and set "Minimum API Level" to Android 5.0
+     -Go to Edit>Preferences>External Tools and assign the JDK path there to where you installed your Java Development Kit 
+         (will look something like C:\Program Files (x86)\Java\jdk1.8.0_131)
+     -Assign the SDK Path to the address that was copied back in Android Studio Setup
+     -Import Google VR package (Unity "Prototyping" package could also be useful for game development later)
+     -In Assets, go to Google VR>Scenes and open a demo scene
+
+3) Phone Setup:
+     -Go to the Play Store and install the Google Cardboard app
+     -Open your Android phone's settings and enable Developer Mode by going to "About Device", scrolling down, and tapping the Build Number 7 times
+     -Now "Developer Options" have been unlocked below "About Device"; go there and enable USB Debugging
+     -On your computer, go to Android Studio and hit Tools>Android Device Monitor
+     -In this "Monitor" application you can see what the game is doing on the phone by going down to the LogCat window and filtering with "tag:Unity"
+
+Now if you build & run the Unity project, the VR demo should appear on your phone and you can debug your project in real time on the phone by using LogCat!
